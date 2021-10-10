@@ -1,0 +1,30 @@
+
+###  Get all 
+GET http://localhost:3031/clients
+
+### Add one
+POST http://localhost:3031/clients
+Content-Type: application/json
+
+{
+    "name": "Hendricks",
+    "comptes": [{
+        "type": "Liquide",
+        "balance": 1000
+    }]
+}
+
+### Get by name
+GET http://localhost:3031/clients/61631cf6c997747703f6d181
+
+### Delete by ID
+DELETE http://localhost:3031/clients/6161c28b48dcb0d0422b2d03
+
+
+### Update by ID
+PATCH http://localhost:3031/clients/6161c28b48dcb0d0422b2d03
+Content-Type: application/json
+
+{
+    "name": "Citadelle"
+}
