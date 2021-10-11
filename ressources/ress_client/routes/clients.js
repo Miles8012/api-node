@@ -46,10 +46,10 @@ router.patch('/:id', getClient, async (req, res) => {
             const updatedClient = await res.client.save();
             res.json(updatedClient)
         } catch(err) {
-            res.status(200).json({ code: "400", message: 'bad request'});
+            res.status(200).json({ code: '400', message: 'bad request'});
         }
     } else {
-        res.status(200).json({ code: "400", message: 'bad request'});
+        res.status(200).json({ code: '400', message: 'bad request'});
     }
 })
 //Delte one 
@@ -58,7 +58,7 @@ router.delete('/:id', getClient, async (req, res) => {
         await res.client.remove();
         res.json({ message: `Client ${res.client.name} was deleted`});
     } catch (err) {
-        res.status(200).json({ code: "400", message: 'bad request'});
+        res.status(200).json({ code: '400', message: 'bad request'});
     }
 })
 

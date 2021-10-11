@@ -12,7 +12,10 @@ db.once('open', () => console.log('Connected to database'));
 
 app.use(express.json())
 
-const clientsRouter = require('./routes/clients')
-app.use('/clients', clientsRouter)
+const clientsRouter = require('./ressources/ress_client/routes/clients');
+app.use('/clients', clientsRouter);
+
+const virementsRouter = require('./ressources/ress_virement/rest/virements')
+app.use('/virements', virementsRouter);
 
 app.listen(3031, () => console.log('Server on'))

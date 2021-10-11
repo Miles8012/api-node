@@ -28,3 +28,6 @@ Content-Type: application/json
 {
     "name": "Citadelle"
 }
+
+### Make a virement
+POST http://localhost:3031/virements/61631cf6c997747703f6d181
