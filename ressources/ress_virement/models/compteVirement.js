@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const CompteSchema = new mongoose.Schema({
+const CompteVirementSchema = new mongoose.Schema({
     type: {
         type: String, 
         required: true
@@ -11,4 +11,4 @@ const CompteSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('Compte', CompteSchema);
+module.exports = mongoose.model('CompteVirement', CompteVirementSchema);
